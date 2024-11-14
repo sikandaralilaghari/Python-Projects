@@ -87,8 +87,39 @@ This python script  fetches the profile picture URL from a specified GitHub Prof
 
 
 
+#Visualize Linear Relationship Using Python
+
+A linear relationship is a statistical term that is nothing but the relationship between two variables. A linear relationship shows how well two variables x and y are related to each other. As a data science professional, you should know how to visualize a linear relationship as it will show the relationship between two numerical features of a dataset. So if you want to learn how to visualize a linear relationship, this article is for you. In this article, I will take you through a tutorial on how to visualize a linear relationship using Python.
 
 
+# Visualize a Linear Relationship using Python
+
+When the value of variable increases or decreases with the increase or decrease in the value of another variable. then it is nothing but a linear relationship. When we visualize a linear relationship, It shows whether the relationship between two features is linear or not. 
+
+
+You can use any data visualization library in Python to visualize a linear relationship. I prefer to use  plotly as it provides interactive results. But as so many Python Programmers use matplotlib for data visualization, I will show you how to visualize a linear relationship with Python using plotly and matplotlib
+
+# Visualize Linear Relationships using Python
+
+Here's how to visulize linear relationships by using the plotly library in python.
+
+To  visualize a relationship using matplotlib, you have to use seaborn.regplot method. So here's how to plot linear relationships by using the matplotlib library in Python. 
+
+
+ Update README File for this project.
+
+# Instagram Data Analysis: Releationship between Likes and Impressions 
+
+This project performs an analysis of the relationship between **Likes** and **Impressions** on Instagram using a dataset. The code visualizes the coorelation between these two variables using **plotly** and **Seaborn** for interactive and static plots, respectively.
+
+# Project Overview:
+The analysis demonstrates the linear relationship between the number of **Impressions** and the **Likes** on Instagram posts. We use two type of visualization 
+
+**Plotly Scatter plot** with trendline: An interactive plot that shows the relationship and adds a trendline to visualize the correlation.
+**Seaborn Regression plot**: A static plot to observe the regression line between the two variables.
+
+## Requirements 
+Before running the code 
 
 
 
