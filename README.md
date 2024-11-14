@@ -66,6 +66,24 @@ So this is how you can correct any misspelt word using the Python programming la
 
 
 
+# Scraping GitHub Profile using Python
+
+Web Scraping is one of the most valuable skills every coder should have. If you want to learn how to collect data from Github using web scraping techniques, this article is for you. I will take you through a web scrapping tutorial on scraping GitHub profile using Python.
+
+# Scraping GitHub Profile Using Python
+
+When we open any GitHub account, we see a profile picture, the name of the user, and a short description of the user in the profile section. Here you  will learn how to scrape your GitHub profile image. For this task you need some knowledge of HTML and the requests and BeautifulSoup  libraries in Python.
+
+If you have never used the BeautifulSoup library before, use the command mentioned below in your command prompt or terminal to install this library in your python virtual Environment.
+
+# pip install beautifulsoup4
+
+You don't need to install the requests library as it is already present in the Python Standard library. Now below is how to write Python a program to a profile image from any GitHub Profile.
+
+# Git Profile Picture Scraper
+This python script  fetches the profile picture URL from a specified GitHub Profile using web scraping. It uses 'requests' to retrieve the HTML content of the profile page and 'BeautifulSoup' to parse and extract the profile image URL.
+
+![alt text](image-2.png)
 
 
 
