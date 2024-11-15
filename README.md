@@ -260,4 +260,75 @@ Save as CSV:
 The retrieved table is saved as programming.csv.
 print(data.head()) displays the first few rows of the table in the console for verification.
 
+Extract text from PDF using Python
+Sometimes a Python developer needs to collect some text information from PDF files. So extracting  text from a PDF is a problem you should know how to solve as a Python developer. If you want to learn how to extract text from a pdf file, this article is for you. In this article, I will take you through a tutorial on how to extract text from pdf with Python.
+
+Extract text from pdf with Python. 
+
+You must know how to collect text from pdf as a Python developer. This skill is useful when a working with resumes. Extracting text from a pdf file is not a difficult task at all. For this task, you need to install python library known as PyPDF2.
+
+You can easily install this Python library using the pip command in your terminal or command prompt as mentioned belwo:
+# pip install pypdf2
+
+After installing this python library, we are all prepared for extracting text from any pdf file. Below is how you can extract text from any pdf file using the Python Programming language. 
+
+import PyPDF2
+
+pdf = open("ML_Project_Proposal.pdf", "rb")
+
+reader = PyPDF2.PdfReader(pdf)
+
+page = reader.pages[0]
+print(page.extract_text())
+
+In the fourth line of above code, the .pages[] will help you specify the page number you want to extract from.
+
+# Summary:
+
+So this is how you can collect text from a PDF is a problem you should know how to solve as a Python developer. I hope you liked this article about extracting text from PDF files with Python. Feel Free to ask valuable questions in the comments section below.
+
+
+Pure README.md content for this project 
+
+PDF Text Extraction Script
+This script reads and extracts text from the first page of a PDF file using the PyPDF2 library.
+
+Files
+script.py: The Python script containing the code to read and extract text from a PDF file.
+ML_Project_Proposal.pdf: The PDF file from which text will be extracted.
+Requirements
+Python 3.x
+PyPDF2 library for PDF reading and text extraction.
+Usage
+Install the PyPDF2 library if it's not already installed:
+
+bash
+Copy code
+pip install PyPDF2
+Place the PDF file (ML_Project_Proposal.pdf) in the same directory as script.py.
+
+Run the script:
+
+bash
+Copy code
+python script.py
+The script will:
+
+Open the specified PDF file in read-binary mode.
+Use PyPDF2 to read the file.
+Extract and print the text from the first page of the PDF.
+Code Explanation
+Import Modules:
+
+PyPDF2 is used to open and extract text from PDF files.
+Open and Read PDF:
+
+The script opens ML_Project_Proposal.pdf in binary mode.
+PyPDF2.PdfReader reads the file and loads all pages.
+Extract Text:
+
+The script extracts text from the first page using page.extract_text() and prints it to the console.
+
+
+
 
