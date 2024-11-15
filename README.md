@@ -331,4 +331,26 @@ The script extracts text from the first page using page.extract_text() and print
 
 
 
+Reverse a String using Python
 
+A String is sequence of characters enclosed in single or double-qoutes. String inversion is one of the most common problems in computer science. Here we need to reverse the characters of a String. So, if you want to learn how to reverse a String, this article is for you. In this article, I walk you through a tutorial on how to reverse a String using Python.
+
+Reverse a String using Python 
+
+There are many ways to reverse a string using Python. You can use any method that you find easy unless you are told to use a specific method. 
+
+You must have heard of the concept of slicing in Python. Here I will show you how to use strin slicing to reverse a string using Python.
+
+def reverse_string(string):
+    return string[::-1]
+a = "ilA radnakiS"
+print(reverse_string(a))
+
+!["Sikandar Ali"](image-3.png)
+
+
+
+The first Character in the string has index 0, and the last character has index n-1, where n is the length of the string. The string slicing operator "::" reads all the characters of the String, and -1, in the end reverse the order of the characters. This is how we can reverse a String.
+
+Summary 
+So this is how we can use string slicing for reversing the order of the characters of a string. String inversion is one of the most common problems in computer science. I hope you liked this article on  a tutoiral on a reversing a string using the python programming language. Feel Free to ask valuable questions in the comments sections below.
