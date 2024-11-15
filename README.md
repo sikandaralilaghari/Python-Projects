@@ -186,5 +186,78 @@ num_return_sequences: Specifies the number of generated sequences to return.
 
 
 
+## Scrape Table from a Website using Python
+
+Web scrapping is one of the skills that every data science professional should know. Sometimes the data we need is available on a website in the form of a table which cannot be downloaded directly from the website. To use that data for any data science task, we need to collect it from the website using web scraping techniques. So if you want to learn how to scrape a table from Website, this article is for you. In this article, I will take you through a tutorial on how to scrape a table from a website using Python.
+
+Scrape Table From Python
+
+There are many Python libraries and modules thaty you can use for web scrapping. To Scrape a table from a website, I will use **urllib** module in python, which is already available in Python standard library. So you don't need to install any external library to scrape data from website. Below is how you can use urllib module to scrape a table from a website using Python Programming language. 
+
+import urllib.request
+
+import pandas as pd
+
+url = 'https://en.wikipedia.org/wiki/Programming_languages_used_in_most_popular_websites'
+
+with urllib.request.urlopen(url) as i:
+    html = i.read()
+data = pd.read_html(html)[0]
+
+
+
+print(data.head())
+
+
+In the code above, I am collecting data from a table available on a webpage that contains a table describing the programming languages used in most popular companies. You can see the we have received after web scraping is about the programming languages and databases being used by companies. So this is how you can scrape tables from any website using the Python programming languages.
+
+If you want to save this data in a CSV file, below is how you can save it:
+data.to_csv("programming.csv")
+
+After running the above code, you will see the CSV file saved on the same directory where your python file is. 
+
+
+Summary:
+So, this is how we can scrape tables from a website using Python. Web Scraping is one of the skills that every datascience professional should know. I hope you liked this article on scraping tables from website using Python. Feel free to ask valuable questions in the comments section below
+
+
+READ ME FILE for this project.
+This project fetches a table of programming languages used in the most popular websites from Wikipedia, processes it using Pandas, and saves it as a CSV file.
+
+Files
+script.py: The Python script containing the code to fetch and save the data.
+programming.csv: The output CSV file containing the table of programming languages used in popular websites.
+Requirements
+Python 3.x
+Pandas library for data handling and processing.
+Usage
+Install the Pandas library if it's not already installed:
+
+bash
+Copy code
+pip install pandas
+Run the script:
+
+bash
+Copy code
+python script.py
+The script will:
+
+Fetch data from Wikipedia's "Programming languages used in most popular websites" page.
+Extract the first table found on the page.
+Save the table as programming.csv.
+Code Explanation
+Import Modules:
+
+urllib.request is used to open and read the URL.
+pandas is used to read and process HTML tables.
+Fetch and Read HTML Table:
+
+The script fetches the HTML content from the specified Wikipedia URL.
+pd.read_html reads all tables and retrieves the first table.
+Save as CSV:
+
+The retrieved table is saved as programming.csv.
+print(data.head()) displays the first few rows of the table in the console for verification.
 
 
