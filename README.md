@@ -354,3 +354,51 @@ The first Character in the string has index 0, and the last character has index 
 
 Summary 
 So this is how we can use string slicing for reversing the order of the characters of a string. String inversion is one of the most common problems in computer science. I hope you liked this article on  a tutoiral on a reversing a string using the python programming language. Feel Free to ask valuable questions in the comments sections below.
+
+
+#SequenceMatcher in Python
+
+SequenceMatcher is a class in Python available in the difflib module, which provides functions for comparing sequences in two different pieces of text. So whenever you want to compare two text files, you can explore difflib module in Python. If you have never used the SequenceMatcher class in Python, this article is for you. In this article, I will take you through a tutorial on SequenceMatcher in Python.
+
+SequenceMatcher in Python
+
+The SequenceMatcher class is available in the difflib module in Python, which is available in Python standard library. You do not need have to install it before using it. There are many classes in the difflib module to compare texts. One of those classes in the difflib module to compare texts. One of those classes is SequenceMatcher which calculates how well the sequence of two texts matches each other. In simple words, it finds similarities in the sequence of two different texts. 
+
+Let's see how to use this class to find similarities in the sequence of two texts. I will first input two very similar texts into this class.
+
+from difflib import SequenceMatcher
+
+text1 = "My Name is Sikandar Ali Laghari"
+text2 = "Hi, My Name is Sikandar Ali Laghari"
+
+# Calculate similarity ratio
+sequence_score = SequenceMatcher(None, text1, text2).ratio()
+
+# Convert to percentage
+similarity_percentage = sequence_score * 100
+
+# Print the result
+print(f"Both are {similarity_percentage:.2f}% Similar")
+
+!["Similarity Percentage"](image-4.png)
+
+So, occording to the score above, it shows that both the text inputs have similar sequences. Now let's try it with text inputs that are dissimilar from each other.
+
+# Dissimilarity 
+
+text3= "My name is Sikandar Ali Laghari"
+text4 = "I am the founder of KaiSik Coding Club"
+#calculate the similarity ratio 
+sequence_score = SequenceMatcher(None, text3, text4).ratio()
+# Convert to Percentage 
+similarity_percentage = sequence_score * 100
+#print the result
+print(f"Both are{similarity_percentage:.2f} % similar")
+
+![less Similarity](image-5.png)
+
+So, occording to the score above, it shows that both the text inputs have less similar sequences. This is how you can use this class in Python available in the difflib module.
+
+Summary:
+
+The SequenceMatcher class is available in the difflib module in Python, which is available in Python standard library. You do not have to install it before using it. I hope you liked this article on a tutorial on a SequenceMatcher in Python. Feel Free to ask valuable questions in the comments section below 
