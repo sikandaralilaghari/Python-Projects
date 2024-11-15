@@ -122,6 +122,64 @@ The analysis demonstrates the linear relationship between the number of **Impres
 Before running the code 
 
 
+## Generate Text Using Python 
+
+Text generation involves generating text using machine learning techniques. The purpose of text generation is to automatically generate text that is indistinguishable from a text written by a human. If you want to learn how to generate text with Python, this article is for you. In this article, I will walk you through how to use the popular GPT-2 text generation model to generate text using python.
+
+# What is GPT-2 Model?
+GPT-2 stands for Generative Pretrained Transformer.It is an open source Natural Language Processing model created by OpenAI. It can generate paragraphs of text with the state of the art performance on many language benchmarks. It is also used for machine translation, question anwering, and text summarization. 
+
+To use the GPT-2 model to generate text using python, you need to install the Transformers library in Python. It can be easily installed using the pip command on your command prompt or terminal as mentioned below.
+
+# pip install transformers
+
+I hope you now have have understood what GPT-2 model is and how you can install it in your Python virtual environment. You can read more about this model ['here'](https://openai.com/index/better-language-models/). Now in the section below, I'll explain how you can use this model for generating text using Python.
+
+# Text Generation using Hugging Face Transformers
+
+This project demonstrates text generation using the Hugging Face Transformers library. Specifically, it shows how to use a pre-trained language model (e.g., GPT-2) to generate text based on a given prompt.
+
+## Requirements
+
+- Python 3.7+
+- Hugging Face Transformers library
+- PyTorch
+
+Install the necessary libraries by running:
+
+```bash
+pip install torch transformers
+
+
+Usage
+The following code snippet loads a pre-trained language model and tokenizer from Hugging Face, generates text based on a given prompt, and outputs multiple text variations.
+
+from transformers import pipeline
+
+# Load pre-trained text generation pipeline
+model = pipeline("text-generation", model="gpt2")
+
+# Generate text
+sentence = model(
+    "Hi, My name is Sikandar Ali, I am here",
+    do_sample=True,
+    top_k=50,
+    temperature=0.9,
+    max_length=100,
+    num_return_sequences=2
+)
+
+# Output the generated text
+for i in sentence:
+    print(i["generated_text"])
+
+
+Parameters
+do_sample: Enables sampling; without it, the model would use greedy decoding.
+top_k: Limits sampling to the top k tokens with the highest probabilities.
+temperature: Controls the randomness of predictions by scaling the logits.
+max_length: Specifies the maximum length of the generated sequence.
+num_return_sequences: Specifies the number of generated sequences to return.
 
 
 
